@@ -1,0 +1,2 @@
+full_rows,official_rows,full_mean_rmse_orig,full_mean_rmse_new,full_mean_delta,full_mean_rel_pct,official_mean_rmse_orig,official_mean_rmse_new,official_mean_delta,official_mean_rel_pct,official_median_rmse_orig,official_median_rmse_new,official_win_rate,official_tie_rate
+420,420,0.735936,0.75406,0.018125,2.462798,0.735936,0.75406,0.018125,2.462798,0.664103,0.685654,0.359524,0.0

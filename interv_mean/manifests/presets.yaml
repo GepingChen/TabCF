@@ -1,0 +1,81 @@
+{
+  "presets": {
+    "a3_s10": {
+      "manifest_name": "a3_s10.json",
+      "codes": ["A3_B3", "A3_B4", "A3_B5", "A3_B6"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a4_s10": {
+      "manifest_name": "a4_s10.json",
+      "codes": ["A4_B3", "A4_B4", "A4_B5", "A4_B6"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a5_s10": {
+      "manifest_name": "a5_s10.json",
+      "codes": ["A5_B3", "A5_B4", "A5_B5", "A5_B6"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a6_s10": {
+      "manifest_name": "a6_s10.json",
+      "codes": ["A6_B3", "A6_B4", "A6_B5", "A6_B6"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a7_s10": {
+      "manifest_name": "a7_s10.json",
+      "codes": ["A7_B3", "A7_B4", "A7_B5"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a8_s10": {
+      "manifest_name": "a8_s10.json",
+      "codes": ["A8_B3", "A8_B4", "A8_B5", "A8_B6"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a9b9_s10": {
+      "manifest_name": "a9b9_s10.json",
+      "codes": ["A9_B9"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a9_s10": {
+      "manifest_name": "a9_s10.json",
+      "codes": ["A9_B3", "A9_B4", "A9_B5"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a3a9_b11_s10": {
+      "manifest_name": "a3a9_b11_s10.json",
+      "codes": ["A3_B11", "A9_B11"],
+      "train_sizes": [4000],
+      "seeds_expr": "1-10"
+    },
+    "b7_s10": {
+      "manifest_name": "b7_s10.json",
+      "codes": ["A3_B7", "A6_B7"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    },
+    "a5b3_s100": {
+      "manifest_name": "a5b3_s100.json",
+      "codes": ["A5_B3"],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-99 123"
+    },
+    "paper_main_s10": {
+      "manifest_name": "paper_main_s10.json",
+      "codes": [
+        "A3_B3", "A3_B4", "A3_B5", "A3_B6",
+        "A5_B3", "A5_B4", "A5_B5", "A5_B6",
+        "A6_B3", "A6_B4", "A6_B5", "A6_B6",
+        "A7_B3", "A7_B4", "A7_B5"
+      ],
+      "train_sizes": [1000, 4000, 10000],
+      "seeds_expr": "1-10"
+    }
+  }
+}

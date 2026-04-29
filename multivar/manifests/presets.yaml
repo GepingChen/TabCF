@@ -1,0 +1,26 @@
+{
+  "presets": {
+    "pilot_s10": {
+      "dgp_codes": ["DGP1_LINEAR", "DGP2_NONLINEAR", "DGP3_PRE_ADDITIVE", "DGP4_PIECEWISE", "DGP5_SOFTPLUS"],
+      "train_sizes": [1000, 4000],
+      "rho_eps_values": [0.0, 0.3, 0.6],
+      "seeds_expr": "1-10",
+      "x_grid_size": 13,
+      "marginal_source": "deepcf",
+      "deepcf_v_points": 101,
+      "deepcf_eval_batch_size": 256,
+      "gpu_count": 2
+    },
+    "paper_s50": {
+      "dgp_codes": ["DGP1_LINEAR", "DGP2_NONLINEAR", "DGP3_PRE_ADDITIVE", "DGP4_PIECEWISE", "DGP5_SOFTPLUS"],
+      "train_sizes": [1000, 4000],
+      "rho_eps_values": [0.0, 0.3, 0.6],
+      "seeds_expr": "1-50",
+      "x_grid_size": 13,
+      "marginal_source": "deepcf",
+      "deepcf_v_points": 101,
+      "deepcf_eval_batch_size": 256,
+      "gpu_count": 2
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "experiment_name": "sec_quantile_example",
+  "codes": ["A3_B3", "A3_B4", "A3_B5", "A3_B6"],
+  "train_sizes": [1000, 4000, 10000],
+  "seeds": [1, 2, 3, 4, 5],
+  "taus": [0.01, 0.025, 0.1, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.9, 0.975, 0.99],
+  "test_seed": 999,
+  "truth_mc_samples": 5000,
+  "x_grid_mode": {
+    "mode": "use_test_X",
+    "fixed_grid_K": 200
+  },
+  "paths": {
+    "data_root": "interv_qtl/IV_datasets",
+    "stage1_output": "interv_qtl/IV_datasets/stage1_output",
+    "stage2_output": "interv_qtl/IV_datasets/stage2_output",
+    "ground_truth": "interv_qtl/IV_datasets/ground_truth",
+    "manifest": "interv_qtl/run_metadata/runs_sec_quantile_example.json",
+    "results_root": "interv_qtl/results",
+    "figures_root": "interv_qtl/figures"
+  },
+  "ours": {
+    "method": "tabpfn_cf_cdf_inversion",
+    "stage1_random_state": 1,
+    "stage2_random_state": 1,
+    "n_v_integration_points": 51,
+    "mu_integrator": "gauss_legendre",
+    "gauss_legendre_order": 18,
+    "n_y_grid": 400
+  },
+  "baselines": [
+    {
+      "name": "dopfn",
+      "backend": "python",
+      "enabled": true
+    },
+    {
+      "name": "div",
+      "backend": "R",
+      "enabled": true
+    }
+  ]
+}
