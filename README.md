@@ -4,17 +4,36 @@ Publication-oriented code and artifacts for **"TabCF: Plug-and-play Distribution
 
 This repository is a double-blind review package for the paper-facing TabCF experiments. It keeps the reproducibility code and compact artifacts while excluding scheduler scripts, local caches, large generated output trees, and machine-specific workspace assumptions.
 
-## Scope
+The map below follows the current NeurIPS manuscript source, `draft/nips_v8.tex`, so reviewers can go directly from a paper section to the relevant code.
 
-- `tabcf_core/`: shared scalar-IV TabCF core used across paper-facing tasks.
-- `interv_mean/`: Section 5.1 interventional-mean benchmark pipeline.
-- `interv_qtl/`: interventional-quantile benchmark code and shipped comparison-report artifacts.
-- `multivar/`: bivariate/joint-distribution extension used for the paper's multivariate response results.
-- `empirical/`: four empirical tasks used in the paper:
+## Paper Section Map
+
+| Paper location in `draft/nips_v8.tex` | What it covers | Repository folders and files |
+| --- | --- | --- |
+| Section 2, **TabCF framework** | Two-stage control-function estimator, predictive CDF construction, and plug-in interventional distributions. | `tabcf_core/` contains the shared DGP utilities, first-stage control construction, second-stage outcome models, foundation-model backends, and tests reused by the experiments. |
+| Section 3, **Extending to multivariate responses** | Bivariate response extension using TabCF marginal estimators plus a Gaussian copula for the joint interventional law. | `multivar/core/` contains the DGPs, Gaussian-copula logic, and experiment runner; `multivar/pipeline/` aggregates and plots the official multivariate benchmark. |
+| Section 4, **Synthetic Experiments** | Shared synthetic IV designs for scalar and bivariate evaluations. | `tabcf_core/dgp.py` and `tabcf_core/dgp_test_utils.py` hold reusable scalar DGP pieces; `interv_mean/`, `interv_qtl/`, and `multivar/` contain the section-specific benchmark pipelines. |
+| Section 4.1, **Interventional means** | Mean-curve benchmark against linear IV, control-function, neural IV, and naive foundation-model baselines. | `interv_mean/` is the manifest-driven mean benchmark. Use `scripts/reproduce_mean.sh` to regenerate the shipped mean figure from `artifacts/aggregated_csv/interv_mean/mean_benchmark_results.csv`. |
+| Section 4.2, **Interventional quantiles** | Quantile-curve benchmark against DIV and IVQR. | `interv_qtl/` contains the quantile pipeline, R baseline wrappers, and visualization code. Use `scripts/reproduce_quantile.sh` to regenerate the shipped quantile RMSE figure from `artifacts/aggregated_csv/interv_qtl/`. |
+| Section 4.3, **Joint interventional distribution** | Bivariate response benchmark evaluated by sliced Wasserstein distance. | `multivar/` contains the joint-distribution implementation and aggregation code. Use `scripts/reproduce_multivar.sh` to regenerate the shipped Wasserstein figure from `artifacts/aggregated_csv/multivar/`. |
+| Section 4.4, **Runtime analysis** | Runtime comparison for mean and quantile benchmarks. | Runtime helpers are `interv_mean/pipeline/benchmark_runtime.py` and `interv_qtl/benchmark_runtime.py`. Full timing runs are environment-dependent; see `docs/hpc.md` and `docs/advanced_recompute.md`. |
+| Section 5, **Real Data Examples** | AJR, Fulton Fish, Card, and CigarettesSW empirical IV examples; Fulton Fish also has a quantile example. | `empirical/` contains real-data download/drop-in logic, TabCF runs, R baselines, and plotting. Use `scripts/reproduce_empirical.sh` to regenerate the shipped 2x2 empirical mean figure from `artifacts/aggregated_csv/empirical/`. Fulton quantile entrypoints are `empirical/run_empirical_quantile.py` and `empirical/run_empirical_quantile.sh`. |
+| Appendices C-D | Benchmark-method notes and real-data application details. | Baseline implementations are under `interv_mean/pipeline/`, `interv_qtl/baselines/`, and `empirical/`; dataset notes are in `docs/data.md` and `empirical/README.md`. |
+
+## Folder Summary
+
+- `tabcf_core/`: shared scalar-IV TabCF core used across the paper-facing tasks.
+- `interv_mean/`: Section 4.1 interventional-mean benchmark pipeline.
+- `interv_qtl/`: Section 4.2 interventional-quantile benchmark code and shipped comparison-report artifacts.
+- `multivar/`: Sections 3 and 4.3 bivariate/joint-distribution extension.
+- `empirical/`: Section 5 real-data tasks:
   - AJR colonial origins
   - Fulton Fish Market
   - Card college proximity
   - CigarettesSW cigarette demand
+- `artifacts/`: compact CSVs and paper-facing figures used by the lightweight reproduction scripts.
+- `scripts/`: one-command refreshers for the main-text figures shipped with this review package.
+- `docs/`: data, reproducibility, HPC, and full-recompute notes.
 
 ## Quick Start
 
