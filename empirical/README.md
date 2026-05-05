@@ -1,6 +1,6 @@
 # empirical
 
-The public release includes the four real-data tasks referenced in `draft/tmlr_v8.tex`:
+The public release includes the four real-data tasks referenced in the manuscript:
 
 - AJR colonial origins
 - Fulton Fish Market

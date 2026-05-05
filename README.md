@@ -1,14 +1,14 @@
 # TabCF
 
-Publication-oriented code and artifacts for **"TabCF: Plug-and-play Distributional Causal Inference"**.
+Publication-oriented code and artifacts for **"TabCF: Distributional Control Function Estimation with Tabular Foundation Models"**.
 
 This repository is a double-blind review package for the paper-facing TabCF experiments. It keeps the reproducibility code and compact artifacts while excluding scheduler scripts, local caches, large generated output trees, and machine-specific workspace assumptions.
 
-The map below follows the current NeurIPS manuscript source, `draft/nips_v8.tex`, so reviewers can go directly from a paper section to the relevant code.
+The map below follows the current NeurIPS manuscript so reviewers can go directly from a paper section to the relevant code.
 
 ## Paper Section Map
 
-| Paper location in `draft/nips_v8.tex` | What it covers | Repository folders and files |
+| Paper location | What it covers | Repository folders and files |
 | --- | --- | --- |
 | Section 2, **TabCF framework** | Two-stage control-function estimator, predictive CDF construction, and plug-in interventional distributions. | `tabcf_core/` contains the shared DGP utilities, first-stage control construction, second-stage outcome models, foundation-model backends, and tests reused by the experiments. |
 | Section 3, **Extending to multivariate responses** | Bivariate response extension using TabCF marginal estimators plus a Gaussian copula for the joint interventional law. | `multivar/core/` contains the DGPs, Gaussian-copula logic, and experiment runner; `multivar/pipeline/` aggregates and plots the official multivariate benchmark. |
