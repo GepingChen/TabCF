@@ -1,10 +1,8 @@
 # TabCF
 
-Publication-oriented code and artifacts for **"TabCF: Distributional Control Function Estimation with Tabular Foundation Models"**.
+This repository contains the implementation code for the paper **"TabCF: Distributional Control Function Estimation with Tabular Foundation Models"**.
 
-This repository is a double-blind review package for the paper-facing TabCF experiments. It keeps the reproducibility code and compact artifacts while excluding scheduler scripts, local caches, large generated output trees, and machine-specific workspace assumptions.
-
-The map below follows the current NeurIPS manuscript so reviewers can go directly from a paper section to the relevant code.
+The map below links each paper section to the relevant code.
 
 ## Paper Section Map
 
@@ -32,7 +30,7 @@ The map below follows the current NeurIPS manuscript so reviewers can go directl
   - Card college proximity
   - CigarettesSW cigarette demand
 - `artifacts/`: compact CSVs and paper-facing figures used by the lightweight reproduction scripts.
-- `scripts/`: one-command refreshers for the main-text figures shipped with this review package.
+- `scripts/`: one-command refreshers for the shipped main-text figures.
 - `docs/`: data, reproducibility, HPC, and full-recompute notes.
 
 ## Quick Start
@@ -56,7 +54,6 @@ pip install -r environment/requirements-baselines.txt
 
 - `card`, `fulton`, and `cigarettes` can be downloaded by `empirical/run_empirical_mean.py`.
 - `AJR` is **manual drop-in only**. Place the Stata file at `empirical/data/manual/ajr_colonial_origins.dta`, or pass `--data-path`.
-- This review package does not vendor restricted datasets, access tokens, SLURM scripts, or local HPC paths.
 
 ## Reproduce The Paper-Facing Figures
 
