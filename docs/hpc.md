@@ -1,6 +1,6 @@
 # HPC Notes
 
-This public release strips the original SLURM job scripts because they contained machine-specific paths, mail settings, and other lab-local assumptions.
+This repository does not include SLURM job scripts, since the originals contain machine-specific paths, mail settings, and other lab-local assumptions that would not transfer to your environment.
 
 If you need scheduler support:
 

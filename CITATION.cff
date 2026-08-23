@@ -1,9 +1,40 @@
 cff-version: 1.2.0
-title: "TabCF: Plug-and-play Distributional Causal Inference"
+title: "TabCF: Distributional Control Function Estimation with Tabular Foundation Models"
 message: "If you use this repository, please cite the TabCF paper and the public code release."
 type: software
+version: 1.0.0
+date-released: "2026-08-22"
 authors:
-  - family-names: Anonymous
-    given-names: Authors
-repository-code: "https://github.com/<to-be-filled>/tabcf-public"
+  - family-names: Chen
+    given-names: Geping
+  - family-names: Li
+    given-names: Chunlin
+  - family-names: Yang
+    given-names: Tianzhong
+  - family-names: Zhu
+    given-names: Zhengyuan
+  - family-names: Zhou
+    given-names: Jing
+repository-code: "https://github.com/GepingChen/TabCF"
 license: MIT
+identifiers:
+  - type: other
+    value: "arXiv:2605.05993"
+    description: "arXiv preprint of the TabCF paper"
+preferred-citation:
+  type: article
+  title: "TabCF: Distributional Control Function Estimation with Tabular Foundation Models"
+  authors:
+    - family-names: Chen
+      given-names: Geping
+    - family-names: Li
+      given-names: Chunlin
+    - family-names: Yang
+      given-names: Tianzhong
+    - family-names: Zhu
+      given-names: Zhengyuan
+    - family-names: Zhou
+      given-names: Jing
+  year: 2026
+  journal: "arXiv preprint arXiv:2605.05993"
+  url: "https://arxiv.org/abs/2605.05993"

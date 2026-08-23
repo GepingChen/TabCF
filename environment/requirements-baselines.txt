@@ -1,2 +1,2 @@
-torch
-tabpfn
+torch>=2.8,<3
+tabpfn>=6.0,<7

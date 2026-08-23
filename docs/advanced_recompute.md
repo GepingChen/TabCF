@@ -19,4 +19,4 @@ Use `multivar/core/run_pipeline.py`, then aggregate with `multivar/pipeline/eval
 - `card`, `fulton`, and `cigarettes` can be redownloaded.
 - `AJR` remains manual drop-in.
 
-For the review package we intentionally do not ship scheduler scripts, local virtualenv/module commands, or machine-specific runtime settings.
+This repository does not ship scheduler scripts, local virtualenv/module commands, or machine-specific runtime settings, since those are specific to the original compute environment. Wrap the CLI entrypoints above in your own site-local scheduler templates as needed.

@@ -1,6 +1,6 @@
 # interv_mean
 
-This review package keeps:
+This public release keeps:
 
 - `pipeline/`: manifest-driven interventional-mean benchmark pipeline used for the paper-facing comparisons.
 - `manifests/`: source presets used to generate benchmark manifests.
