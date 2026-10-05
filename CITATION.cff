@@ -1,9 +1,8 @@
 cff-version: 1.2.0
-title: "TabCF: Plug-and-play Distributional Causal Inference"
-message: "If you use this repository, please cite the TabCF paper and the public code release."
+title: "Anonymous research code"
+message: "Author and publication details are withheld for anonymous review."
 type: software
 authors:
   - family-names: Anonymous
     given-names: Authors
-repository-code: "https://github.com/<to-be-filled>/tabcf-public"
 license: MIT

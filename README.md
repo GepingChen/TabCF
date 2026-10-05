@@ -1,6 +1,6 @@
 # TabCF
 
-This repository contains the implementation code for the paper **"TabCF: Distributional Control Function Estimation with Tabular Foundation Models"**.
+This repository contains the implementation code accompanying an anonymous submission on distributional causal inference with tabular foundation models.
 
 The map below links each paper section to the relevant code.
 
