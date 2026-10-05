@@ -1,5 +1,8 @@
 # TabCF
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](environment/requirements-core.txt)
+
 This repository contains the implementation code accompanying an anonymous submission on distributional causal inference with tabular foundation models.
 
 The map below links each paper section to the relevant code.
@@ -35,6 +38,8 @@ The map below links each paper section to the relevant code.
 
 ## Quick Start
 
+Requires **Python 3.9+** (tested with 3.9.21).
+
 Create a lightweight Python environment:
 
 ```bash
@@ -48,6 +53,23 @@ If you want to run TabCF rather than only re-render shipped artifacts:
 
 ```bash
 pip install -r environment/requirements-baselines.txt
+```
+
+The DIV and IVQR baselines used in Section 4.2 and Section 5 are R scripts. If you want to
+re-run those baselines rather than only using the shipped comparison CSVs, install R (tested
+with R 4.4.3) and the packages listed in `environment/requirements-r.txt`:
+
+```bash
+grep -v '^#' environment/requirements-r.txt | Rscript -e 'install.packages(readLines("stdin"))'
+```
+
+### Running the tests
+
+Each module ships lightweight unit tests under its own `tests/` directory. After installing
+`environment/requirements-core.txt`, verify your setup with:
+
+```bash
+pytest tabcf_core interv_mean interv_qtl multivar empirical
 ```
 
 ## Data Policy
@@ -83,6 +105,9 @@ Representative shipped artifact names:
 
 ## Notes
 
-- The repository keeps the original script-first layout on purpose.
-- `tabcf_core` remains the shared core layer used by `interv_qtl`, `multivar`, and `empirical`.
+- `tabcf_core` is the shared core layer used by `interv_qtl`, `multivar`, and `empirical`.
 - HPC and full recomputation notes are in [docs/hpc.md](docs/hpc.md) and [docs/advanced_recompute.md](docs/advanced_recompute.md).
+
+## License
+
+This project is released under the [MIT License](LICENSE).

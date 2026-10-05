@@ -2,6 +2,8 @@ cff-version: 1.2.0
 title: "Anonymous research code"
 message: "Author and publication details are withheld for anonymous review."
 type: software
+version: 1.0.0
+date-released: "2026-08-22"
 authors:
   - family-names: Anonymous
     given-names: Authors

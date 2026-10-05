@@ -2,7 +2,7 @@
 
 Paper-facing interventional-quantile evaluation for TabCF.
 
-This review package keeps the quantile pipeline code plus compact report CSVs under:
+This public release keeps the quantile pipeline code plus compact report CSVs under:
 
 `artifacts/aggregated_csv/interv_qtl/`
 
@@ -18,4 +18,4 @@ Key shipped filenames:
 - `artifacts/aggregated_csv/interv_qtl/quantile_rmse_by_quantile_level.csv`
 - `artifacts/paper_figures/original/interv_qtl/quantile_rmse_figure.pdf`
 
-Heavyweight Stage 1 / Stage 2 output directories and scheduler scripts are intentionally not part of this review package.
+Heavyweight Stage 1 / Stage 2 output directories and scheduler scripts are intentionally not part of this public release; see [docs/advanced_recompute.md](../docs/advanced_recompute.md) for the full recomputation path.
